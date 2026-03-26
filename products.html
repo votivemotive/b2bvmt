@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Products – Votive Motive</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <img src="Gemini_Generated_Image_ixgam1ixgam1ixga-removebg-preview.png" alt="logo">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="b2b.html">B2B</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- PRODUCTS SECTION -->
+<section class="products">
+
+  <h2>Our Product Range</h2>
+  <p class="subtitle">Premium Hotel Amenities Designed for Luxury & Convenience</p>
+
+  <!-- CATEGORY FILTER -->
+  <div class="category-tabs">
+    <button class="tab active" data-filter="all">All</button>
+    <button class="tab" data-filter="shampoo">Shampoo</button>
+    <button class="tab" data-filter="shower">Shower</button>
+    <button class="tab" data-filter="kits">Kits</button>
+    <button class="tab" data-filter="accessories">Accessories</button>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <div class="product-grid">
+
+    <!-- SHAMPOO SKUs -->
+    <div class="product-card shampoo">
+      <img src="Shampoo_35ml.jpg" alt="Shampoo">
+      <h3>35ml Shampoo</h3>
+      <p>Hotel mini bottle</p>
+      <button class="btn">View Details</button>
+    </div>
+
+    <div class="product-card shampoo">
+      <img src="Shampoo_30ml.jpg" alt="Shampoo">
+      <h3>30ml Shampoo</h3>
+      <p>Premium variant</p>
+      <button class="btn">View Details</button>
+    </div>
+
+    <div class="product-card shampoo">
+      <img src="Shampoo_22ml.jpg" alt="Shampoo">
+      <h3>22ml Shampoo</h3>
+      <p>Premium variant</p>
+      <button class="btn">View Details</button>
+    </div>
+
+    <div class="product-card shampoo">
+      <img src="Shampoo_20ml.jpg" alt="Shampoo">
+      <h3>20ml Shampoo</h3>
+      <p>Premium variant</p>
+      <button class="btn">View Details</button>
+    </div>
+
+    <div class="product-card shampoo">
+      <img src="1ltr_shampoo.jpg" alt="Shampoo">
+      <h3>1L Shampoo</h3>
+      <p>Bulk refill pack</p>
+      <button class="btn">View Details</button>
+    </div>
+
+    <!-- SHOWER -->
+    <div class="product-card shower">
+      <img src="Showergel_30ml.jpg" alt="Shower Gel">
+      <h3>Shower Gel 30ml</h3>
+      <p>Refreshing body wash</p>
+      <button class="btn">View Details</button>
+    </div>
+
+    <div class="product-card shower">
+      <img src="showergel_15ml.jpg" alt="Shower Gel">
+      <h3>Shower Gel 15ml</h3>
+      <p>Luxury fragrance</p>
+      <button class="btn">View Details</button>
+    </div>
+
+    <!-- KITS -->
+    <div class="product-card kits">
+      <img src="Dental Kit.jpg" alt="Dental Kit">
+      <h3>Primium Dental Kit</h3>
+      <p>Standard guest kit</p>
+      <button class="btn">View Details</button>
+    </div>
+
+    <div class="product-card kits">
+      <img src="Vinsan Kit.jpg" alt="Dental Kit">
+      <h3>Clayherbs Kit Premium</h3>
+      <p>Luxury packaging</p>
+      <button class="btn">View Details</button>
+    </div>
+
+    <!-- ACCESSORIES -->
+    <div class="product-card accessories">
+      <img src="Slippers.jpg" alt="Slippers">
+      <h3>Hotel Slippers</h3>
+      <p>Comfortable disposable</p>
+      <button class="btn">View Details</button>
+    </div>
+
+    <div class="product-card accessories">
+      <img src="Black Dispenser.jpg" alt="Dispenser">
+      <h3>Dispenser Bottles</h3>
+      <p>Eco-friendly refill</p>
+      <button class="btn">View Details</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- AMAZON SECTION -->
+<section class="connect">
+  <h2>Available on Amazon</h2>
+  <a href="#" class="btn">Visit Store</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">© 2026 Votive Motive</footer>
+
+<!-- FILTER SCRIPT -->
+<script>
+const tabs = document.querySelectorAll(".tab");
+const cards = document.querySelectorAll(".product-card");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    let filter = tab.getAttribute("data-filter");
+
+    cards.forEach(card => {
+      if (filter === "all" || card.classList.contains(filter)) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+  });
+});
+</script>
+
+</body>
+</html>
